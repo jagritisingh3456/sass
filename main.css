@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+.main_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #576574;
+}
+.main_header h1 {
+  color: black;
+  font-size: 4rem;
+  cursor: pointer;
+  letter-spacing: 0.3rem;
+  font-style: bold;
+}
+.main_header h1:hover {
+  color: aqua;
+}
+.main_header h1::after {
+  content: " Jagriti Singh";
+}
+.main_header p {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.main_header p:hover {
+  color: aqua;
+}
+.main_header p::before {
+  content: "Maa ";
+}
+.main_header h3 {
+  font-size: 5rem;
+}/*# sourceMappingURL=main.css.map */

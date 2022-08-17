@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 65.2%;
+}
+
+$bg-color:#576574;
+//Operaters
+//Variables
+//Nesting
+//Mixin
+//Paramers
+
+@mixin flexproperty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+//pass in parameter() some name with $ only:::
+@mixin style ($para1){
+    font-style: $para1;
+    
+}
+
+.main_header{
+    @include flexproperty;
+    width: 100vw;
+    height: 100vh;
+    // display: grid;
+    // place-items: center;
+    background-color: $bg-color;
+    h1{
+        color: black;
+        font-size: 2rem + 2rem; //we can also use operaters with the help of sass::
+        cursor: pointer;
+        letter-spacing: 0.3rem;
+        @include style(bold);  //with the help of parameter
+        &:hover{
+            color: aqua;
+        }
+        &::after{
+            content: " Jagriti Singh";
+        }
+    }
+   
+    p{
+        font-size: 2rem;
+        cursor: pointer;
+        &:hover{
+            color: aqua;
+        }
+        &::before{
+            content: "Maa ";
+        }
+    }
+    
+    h3{
+        font-size: 5rem;
+    }
+}
+
+
